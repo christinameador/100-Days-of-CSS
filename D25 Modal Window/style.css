@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #caeffa;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list {
+  width: 250px;
+}
+
+@keyframes show {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes hiding {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  display: none;
+}
+.card.hiding {
+  display: block;
+  animation-name: hiding;
+  animation-duration: 1s;
+}
+.card.active {
+  display: block;
+  animation-name: show;
+  animation-duration: 1s;
+}
+.card .triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to top right, rgba(0, 0, 0, 0) 50%, #8391a1 50%);
+  color: #fff;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+}
+.card .number {
+  position: absolute;
+  padding: 6px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-weight: 600;
+}
+.card .text {
+  padding: 15px;
+}
+.card .text h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  color: #616e7d;
+}
+.card .text p {
+  text-align: center;
+  font-size: 0.75em;
+  color: c8cfd6;
+}
+.card button {
+  color: #fff;
+  background-color: #55dee0;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  font-size: 0.9em;
+  border: none;
+  transition: background-color 0.8s;
+}
+.card button:focus {
+  border: none;
+  outline: none;
+}
+.card button:hover {
+  background-color: #3c9fbd;
+  transition: background-color 0.8s;
+}

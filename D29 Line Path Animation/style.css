@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container,
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.frame {
+    background: #73eaff;
+    width: 400px;
+    height: 400px;
+}
+
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-dasharray: 81 581;
+    stroke-dashoffset: 0;
+    animation: go 2s linear infinite forwards;
+}
+
+@keyframes go {
+    100% {
+        stroke-dashoffset: -581;
+    }
+}
+
+.circle {
+    background: transparent;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    animation: ball 2s linear 1s infinite forwards;
+}
+
+@keyframes ball {
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}

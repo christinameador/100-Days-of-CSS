@@ -1,0 +1,191 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+@keyframes checkAnim {
+  0% {width: 260px; height: 60px; border: 2px solid #fff;}
+  100% {width: 60px; height: 60px; border: 2px solid #6da387;}
+}
+@keyframes buttonAnim {
+  0% {width: 260px; border: 2px solid #fff;}
+  100% {width: 60px; border: 2px solid #45B078;}
+}
+@keyframes checkYes {
+   0% {opacity: 0; transform: scale(0.8);}
+  30% {transform: scale(0.8);}
+  100% {opacity: 1; transform: scale(1);}
+}
+@keyframes boxShadowMain {
+  0% {box-shadow: 0 0 0 0 #fff;}
+  70% {box-shadow: 0 0 1px 18px #fff;}
+  100% {box-shadow: 0 0 4px 20px #fff;}
+}
+@keyframes boxShadowAfter {
+  0% {box-shadow: 0 0 0 0 #57D895;}
+  70% {box-shadow: 0 0 1px 20px #57D895;}
+  100% {box-shadow: 0 0 4px 44px #57D895;}
+}
+.main {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #57D895;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+input {
+  display: none;
+}
+label {
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 60px;
+  vertical-align:center;
+  width: 260px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background: #57D895;
+  cursor: pointer;
+}
+label::before {
+  content: 'Finish';
+  display: inline;
+  letter-spacing: 3px;
+}
+input:checked ~ label::before {
+  display: none;
+}
+label::after {
+  content: '✔';
+  display: block;
+  position: absolute;
+  z-index: 100;
+  color: #57D895;
+  font-size: 2.3em;
+  left: 167px;
+  top: 167px;
+  width: 66px;
+  height: 66px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0; /**/    
+  transform: scale(0.8);
+}
+input:checked ~ label::after {
+  animation: checkYes 150ms ease-in 1250ms, boxShadowAfter 1000ms ease-out 1500ms;
+  animation-fill-mode: forwards;
+}
+label:hover {
+  background: #37BE77;
+}
+label:focus, label:active {
+  outline: none;
+  background: none;
+}
+input:checked ~ label {
+  animation: buttonAnim 350ms ease-out, boxShadowMain 1000ms ease-out 1350ms;
+  animation-fill-mode: forwards;
+}
+button::before:active, button::before:focus {
+  animation-name: buttonHideFin;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* spinner */
+
+@keyframes rotateF {
+  0% {transform: rotate(-90deg) skew(90deg, 0deg);}
+  100% {transform: rotate(-90deg) skew(0deg, 0deg);}
+}
+@keyframes rotateS {
+  0% {transform: rotate(0deg) skew(90deg, 0deg);}
+  100% {transform: rotate(0deg) skew(0deg, 0deg);}
+}
+@keyframes rotateT {
+  0% {transform: rotate(90deg) skew(90deg, 0deg);}
+  100% {transform: rotate(90deg) skew(0deg, 0deg);}
+}
+@keyframes rotateL {
+  0% {transform: rotate(180deg) skew(90deg, 0deg);}
+  100% {transform: rotate(180deg) skew(0deg, 0deg);}
+}
+@keyframes spinnerCon {
+  0% {width: 64px;}
+  100% {width: 0;}
+}
+@keyframes opacitySpin {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.spinner-container {
+  position: absolute;
+  width: 64px;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+}
+input:checked ~ .spinner-container {
+  display: block;
+  animation: opacitySpin 250ms linear 400ms, spinnerCon 1ms linear 1550ms;
+  animation-fill-mode: forwards;
+}
+.spinner {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #45B078;
+  overflow: hidden;
+}
+.spinner::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #57D895;
+}
+.f, .s, .t, .l {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 60px;
+  height: 120px;
+  background: #fff;
+  transform-origin: left top;
+}
+.f {
+  transform: rotate(-90deg) skew(90deg, 0deg);
+  animation: rotateF 250ms ease-in; 
+  animation-fill-mode: forwards;
+  animation-delay: 400ms;
+}
+.s {
+  transform: rotate(0deg) skew(90deg, 0deg);
+  animation: rotateS 250ms linear;
+  animation-fill-mode: forwards;
+  animation-delay: 650ms;
+}
+.t {
+  transform: rotate(90deg) skew(90deg, 0deg);
+  animation: rotateT 250ms linear;
+  animation-delay: 900ms;
+  animation-fill-mode: forwards;
+}
+.l {
+  transform: rotate(180deg) skew(90deg, 0deg);
+  animation: rotateL 250ms ease-out;
+  animation-delay: 1150ms;
+  animation-fill-mode: forwards;
+}

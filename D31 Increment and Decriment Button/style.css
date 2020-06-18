@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: linear-gradient(45deg, #0ffac3 0%, #a01464 100%);
+  color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.controls {
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+}
+
+.controls button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 24px;
+  transition: background-color .1s;
+    cursor: pointer;
+}
+
+.controls button.inc {
+  color: green;
+}
+
+.controls button.inc::before,
+.controls button.inc::after,
+.controls button.dec::before {
+  position: absolute;
+  display: block;
+  content: '';
+  background-color: green;
+  transition: background-color .1s;
+}
+
+.controls button.inc::before,
+.controls button.dec::before {
+  width: 14px;
+  height: 2px;
+}
+
+.controls button.inc::after {
+  width: 2px;
+  height: 14px;
+}
+
+.controls button.inc:hover::before,
+.controls button.inc:hover::after,
+.controls button.dec:hover::before {
+  background-color: white;
+}
+
+.controls button.inc:hover {
+  background-color: green;
+}
+
+.controls button.dec {
+  color: red;
+}
+
+.controls button.dec::before {
+  background-color: red;
+}
+
+.controls button.dec:hover {
+  background-color: red;
+}
+
+.controls button:hover {
+  color: white;
+}
+
+.counter {
+    min-width: 60px;
+    text-align: center;
+   font-weight: bold;
+    transition: .5s;
+}
+
+.counter.animation {
+    animation-name: counter;
+    animation-duration: 0.2s;
+}
+
+@keyframes counter {
+  from { 
+            transform: scale(3);
+    }
+  
+    to {
+            transform: scale(1);
+    }
+}

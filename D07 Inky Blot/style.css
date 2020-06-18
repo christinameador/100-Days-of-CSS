@@ -1,0 +1,371 @@
+html {
+  filter: contrast(40);
+  overflow: hidden;
+}
+
+.frame {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 100%;
+  filter: blur(15px);
+}
+
+.drop, .spark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+}
+.drop::after, .spark::after {
+  position: absolute;
+  content: '';
+  background-color: #000;
+  border-radius: 100%;
+}
+
+.drop-1 {
+  transform: rotate(213deg);
+}
+.drop-1::after {
+  width: 16px;
+  height: 16px;
+  transform-origin: 44px 44px;
+  animation: rotate 4.2s ease-in-out 0.2s infinite;
+  filter: blur(6px);
+}
+
+.spark-1 {
+  transform: rotate(279deg);
+}
+.spark-1::after {
+  width: 6.3333333333px;
+  height: 6.3333333333px;
+  animation: travelAway 1.5s linear 0.1s infinite;
+  filter: blur(2px);
+}
+
+.drop-2 {
+  transform: rotate(260deg);
+}
+.drop-2::after {
+  width: 17px;
+  height: 17px;
+  transform-origin: 43px 43px;
+  animation: rotate 6.4s ease-in-out 0.4s infinite;
+  filter: blur(6px);
+}
+
+.spark-2 {
+  transform: rotate(155deg);
+}
+.spark-2::after {
+  width: 6.6666666667px;
+  height: 6.6666666667px;
+  animation: travelAway 1.5s linear 0.2s infinite;
+  filter: blur(2px);
+}
+
+.drop-3 {
+  transform: rotate(333deg);
+}
+.drop-3::after {
+  width: 18px;
+  height: 18px;
+  transform-origin: 42px 42px;
+  animation: rotate 4.6s ease-in-out 0.6s infinite;
+  filter: blur(6px);
+}
+
+.spark-3 {
+  transform: rotate(145deg);
+}
+.spark-3::after {
+  width: 7px;
+  height: 7px;
+  animation: travelAway 1.8333333333s linear 0.3s infinite;
+  filter: blur(2px);
+}
+
+.drop-4 {
+  transform: rotate(126deg);
+}
+.drop-4::after {
+  width: 19px;
+  height: 19px;
+  transform-origin: 41px 41px;
+  animation: rotate 6.8s ease-in-out 0.8s infinite;
+  filter: blur(6px);
+}
+
+.spark-4 {
+  transform: rotate(150deg);
+}
+.spark-4::after {
+  width: 7.3333333333px;
+  height: 7.3333333333px;
+  animation: travelAway 2.5s linear 0.4s infinite;
+  filter: blur(2px);
+}
+
+.drop-5 {
+  transform: rotate(329deg);
+}
+.drop-5::after {
+  width: 20px;
+  height: 20px;
+  transform-origin: 40px 40px;
+  animation: rotate 5s ease-in-out 1s infinite;
+  filter: blur(6px);
+}
+
+.spark-5 {
+  transform: rotate(143deg);
+}
+.spark-5::after {
+  width: 7.6666666667px;
+  height: 7.6666666667px;
+  animation: travelAway 2.9s linear 0.5s infinite;
+  filter: blur(2px);
+}
+
+.drop-6 {
+  transform: rotate(281deg);
+}
+.drop-6::after {
+  width: 21px;
+  height: 21px;
+  transform-origin: 39px 39px;
+  animation: rotate 6.2s ease-in-out 1.2s infinite;
+  filter: blur(6px);
+}
+
+.spark-6 {
+  transform: rotate(185deg);
+}
+.spark-6::after {
+  width: 8px;
+  height: 8px;
+  animation: travelAway 3.3333333333s linear 0.6s infinite;
+  filter: blur(2px);
+}
+
+.drop-7 {
+  transform: rotate(104deg);
+}
+.drop-7::after {
+  width: 22px;
+  height: 22px;
+  transform-origin: 38px 38px;
+  animation: rotate 7.4s ease-in-out 1.4s infinite;
+  filter: blur(6px);
+}
+
+.spark-7 {
+  transform: rotate(68deg);
+}
+.spark-7::after {
+  width: 8.3333333333px;
+  height: 8.3333333333px;
+  animation: travelAway 3.6428571429s linear 0.7s infinite;
+  filter: blur(2px);
+}
+
+.drop-8 {
+  transform: rotate(114deg);
+}
+.drop-8::after {
+  width: 23px;
+  height: 23px;
+  transform-origin: 37px 37px;
+  animation: rotate 4.6s ease-in-out 1.6s infinite;
+  filter: blur(6px);
+}
+
+.spark-8 {
+  transform: rotate(94deg);
+}
+.spark-8::after {
+  width: 8.6666666667px;
+  height: 8.6666666667px;
+  animation: travelAway 4.125s linear 0.8s infinite;
+  filter: blur(2px);
+}
+
+.drop-9 {
+  transform: rotate(163deg);
+}
+.drop-9::after {
+  width: 24px;
+  height: 24px;
+  transform-origin: 36px 36px;
+  animation: rotate 6.8s ease-in-out 1.8s infinite;
+  filter: blur(6px);
+}
+
+.spark-9 {
+  transform: rotate(324deg);
+}
+.spark-9::after {
+  width: 9px;
+  height: 9px;
+  animation: travelAway 4.7222222222s linear 0.9s infinite;
+  filter: blur(2px);
+}
+
+.drop-10 {
+  transform: rotate(340deg);
+}
+.drop-10::after {
+  width: 25px;
+  height: 25px;
+  transform-origin: 35px 35px;
+  animation: rotate 8s ease-in-out 2s infinite;
+  filter: blur(6px);
+}
+
+.spark-10 {
+  transform: rotate(114deg);
+}
+.spark-10::after {
+  width: 9.3333333333px;
+  height: 9.3333333333px;
+  animation: travelAway 5.2s linear 1s infinite;
+  filter: blur(2px);
+}
+
+.drop-11 {
+  transform: rotate(241deg);
+}
+.drop-11::after {
+  width: 26px;
+  height: 26px;
+  transform-origin: 34px 34px;
+  animation: rotate 7.2s ease-in-out 2.2s infinite;
+  filter: blur(6px);
+}
+
+.spark-11 {
+  transform: rotate(18deg);
+}
+.spark-11::after {
+  width: 9.6666666667px;
+  height: 9.6666666667px;
+  animation: travelAway 5.6818181818s linear 1.1s infinite;
+  filter: blur(2px);
+}
+
+.drop-12 {
+  transform: rotate(46deg);
+}
+.drop-12::after {
+  width: 27px;
+  height: 27px;
+  transform-origin: 33px 33px;
+  animation: rotate 5.4s ease-in-out 2.4s infinite;
+  filter: blur(6px);
+}
+
+.spark-12 {
+  transform: rotate(345deg);
+}
+.spark-12::after {
+  width: 10px;
+  height: 10px;
+  animation: travelAway 6.1666666667s linear 1.2s infinite;
+  filter: blur(2px);
+}
+
+.drop-13 {
+  transform: rotate(8deg);
+}
+.drop-13::after {
+  width: 28px;
+  height: 28px;
+  transform-origin: 32px 32px;
+  animation: rotate 6.6s ease-in-out 2.6s infinite;
+  filter: blur(6px);
+}
+
+.spark-13 {
+  transform: rotate(154deg);
+}
+.spark-13::after {
+  width: 10.3333333333px;
+  height: 10.3333333333px;
+  animation: travelAway 6.6538461538s linear 1.3s infinite;
+  filter: blur(2px);
+}
+
+.drop-14 {
+  transform: rotate(325deg);
+}
+.drop-14::after {
+  width: 29px;
+  height: 29px;
+  transform-origin: 31px 31px;
+  animation: rotate 6.8s ease-in-out 2.8s infinite;
+  filter: blur(6px);
+}
+
+.spark-14 {
+  transform: rotate(5deg);
+}
+.spark-14::after {
+  width: 10.6666666667px;
+  height: 10.6666666667px;
+  animation: travelAway 7.0714285714s linear 1.4s infinite;
+  filter: blur(2px);
+}
+
+.drop-15 {
+  transform: rotate(43deg);
+}
+.drop-15::after {
+  width: 30px;
+  height: 30px;
+  transform-origin: 30px 30px;
+  animation: rotate 9s ease-in-out 3s infinite;
+  filter: blur(6px);
+}
+
+.spark-15 {
+  transform: rotate(53deg);
+}
+.spark-15::after {
+  width: 11px;
+  height: 11px;
+  animation: travelAway 7.6333333333s linear 1.5s infinite;
+  filter: blur(2px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes travelAway {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(30vmax) scale(0);
+  }
+}

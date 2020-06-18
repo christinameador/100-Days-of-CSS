@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(https://use.fontawesome.com/releases/v5.8.1/css/all.css);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4CB6DE;
+  z-index: 0;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.citation {
+  color: #fff;
+  margin: 0;
+  padding: 65px 30px;
+}
+.citation p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+}
+.citation p .double-quote {
+  font-family: Arial;
+  font-size: 250px;
+  color: #6AC2E3;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  z-index: -1;
+}
+.citation p .term {
+  background: #286F8A;
+  padding: 0 8px 7px;
+  cursor: pointer;
+  position: relative;
+}
+.citation p .term:hover .tooltip {
+  bottom: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.citation p .term .tooltip {
+  position: absolute;
+  width: 300px;
+  bottom: 100%;
+  left: calc(50% - 150px);
+  bottom: calc(100% + 20px);
+  cursor: text;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-out;
+}
+.citation p .term .tooltip::after {
+  content: '';
+  display: block;
+  height: 14px;
+  width: 14px;
+  margin: 0 auto;
+  transform: translateY(-8px) rotate(45deg);
+  background: #286F8A;
+}
+.citation p .term .tooltip .header {
+  color: #286F8A;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  display: block;
+  padding-left: 20px;
+}
+.citation p .term .tooltip .header .fa-volume-up {
+  font-size: 13px;
+  margin-left: 10px;
+  transition: all .3s;
+  cursor: pointer;
+}
+.citation p .term .tooltip .header .fa-volume-up:hover {
+  transform: scale(1.2);
+}
+.citation p .term .tooltip .definition {
+  background: #286F8A;
+  display: block;
+  font-size: 16px;
+  padding: 10px 20px;
+  line-height: 26px;
+}
+.citation cite {
+  font-size: 20px;
+  font-weight: 300;
+}

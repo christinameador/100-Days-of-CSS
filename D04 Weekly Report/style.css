@@ -1,0 +1,302 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #00c2af;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.statistics {
+  width: 280px;
+  height: 220px;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.statistics-head {
+  height: 60px;
+  background-color: #ffb65c;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+.statistics-title {
+  flex: 1;
+}
+
+.statistics-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.statistics-time_range {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.statistics-total-name {
+  font-size: 11px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.statistics-total-value {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.statistics-body {
+  height: 160px;
+  background-color: #ffffff;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.statistics-parameters {
+  display: inline-flex;
+  font-size: 9px;
+  padding: 5px;
+  justify-content: flex-end;
+}
+
+.statistics-parameter {
+  margin: 5px;
+}
+.statistics-parameter span {
+  position: relative;
+  padding: 0 10px 0 25px;
+}
+.statistics-parameter span:before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+  content: '';
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+}
+.statistics-parameter span.red:before {
+  background: red;
+}
+.statistics-parameter span.blue:before {
+  background: blue;
+}
+.statistics-parameter span.green:before {
+  background: green;
+}
+.statistics-parameter span.yellow:before {
+  background: yellow;
+}
+
+.statistics-graph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.statistics-graph-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 5px 5px 10px;
+}
+
+.statistics-graph-line {
+  border-bottom: 1px solid lightgray;
+}
+
+.statistics-graph-plot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.statistics-graph-data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.statistics-graph-data polyline, .statistics-graph-data path {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.statistics-graph-data.red polyline, .statistics-graph-data.red path {
+  stroke: red;
+}
+.statistics-graph-data.blue polyline, .statistics-graph-data.blue path {
+  stroke: blue;
+}
+.statistics-graph-data.green polyline, .statistics-graph-data.green path {
+  stroke: green;
+}
+.statistics-graph-data.yellow polyline, .statistics-graph-data.yellow path {
+  stroke: yellow;
+}
+
+.statistics-graph-points {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.statistics-graph-points.red .statistics-graph-point {
+  background: red;
+}
+.statistics-graph-points.red .statistics-graph-point .tooltip {
+  background: red;
+}
+.statistics-graph-points.red .statistics-graph-point .tooltip:before {
+  border: 3px solid red;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.statistics-graph-points.red .point-1 {
+  left: 7px;
+  top: 42px;
+}
+.statistics-graph-points.red .point-2 {
+  left: 47px;
+  top: 9px;
+}
+.statistics-graph-points.red .point-3 {
+  left: 87px;
+  top: 19px;
+}
+.statistics-graph-points.red .point-4 {
+  left: 127px;
+  top: 8px;
+}
+.statistics-graph-points.red .point-5 {
+  left: 168px;
+  top: 34px;
+}
+.statistics-graph-points.red .point-6 {
+  left: 209px;
+  top: 44px;
+}
+.statistics-graph-points.red .point-7 {
+  left: 248px;
+  top: 16px;
+}
+.statistics-graph-points.blue .statistics-graph-point {
+  background: blue;
+}
+.statistics-graph-points.blue .statistics-graph-point .tooltip {
+  background: blue;
+}
+.statistics-graph-points.blue .statistics-graph-point .tooltip:before {
+  border: 3px solid blue;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.statistics-graph-points.blue .point-1 {
+  left: 7px;
+  top: 57px;
+}
+.statistics-graph-points.blue .point-2 {
+  left: 47px;
+  top: 47px;
+}
+.statistics-graph-points.blue .point-3 {
+  left: 86px;
+  top: 61px;
+}
+.statistics-graph-points.blue .point-4 {
+  left: 127px;
+  top: 52px;
+}
+.statistics-graph-points.blue .point-5 {
+  left: 169px;
+  top: 58px;
+}
+.statistics-graph-points.blue .point-6 {
+  left: 209px;
+  top: 71px;
+}
+.statistics-graph-points.blue .point-7 {
+  left: 249px;
+  top: 61px;
+}
+
+.statistics-graph-point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+  background: black;
+  color: white;
+}
+.statistics-graph-point .tooltip {
+  position: absolute;
+  top: -17px;
+  left: -10px;
+  font-size: 11px;
+  width: 20px;
+  text-align: center;
+  opacity: 0;
+  border-radius: 3px;
+  padding: 3px;
+  transform: translateY(0px);
+  visibility: hidden;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s, visibility 0.4s ease-in-out;
+}
+.statistics-graph-point .tooltip:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 10px;
+  transform: rotate(45deg);
+}
+.statistics-graph-point:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
+.statistics-graph-details {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.statistics-graph-detail {
+  display: inline-flex;
+  font-size: 9px;
+  color: gray;
+}

@@ -1,0 +1,114 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blocks {
+  display: flex;
+  position: absolute;
+}
+
+.block {
+  width: 400px;
+  height: 400px;
+}
+
+.first {
+  background: #9b59b6;
+}
+
+.second {
+  background: #3498db;
+}
+
+.third {
+  background: #1abc9c;
+}
+
+.second-radio:checked ~ .blocks {
+  transform: translateX(-400px);
+  transition: all 1s ease-in-out;
+}
+
+.third-radio:checked ~ .blocks {
+  transform: translateX(-800px);
+  transition: all 1s ease-in-out;
+}
+
+.first-radio:checked ~ .blocks {
+  transform: translateX(0px);
+  transition: all 1s ease-in-out;
+}
+
+.second-radio:checked ~ .active {
+  transform: translateX(195px) translateY(195px);
+  transition: all 1s ease-in-out;
+}
+
+.third-radio:checked ~ .active {
+  transition: all 1s ease-in-out;
+  transform: translateX(245px) translateY(195px);
+}
+
+.first-radio:checked ~ .active {
+  transform: translateX(145px) translateY(195px);
+  transition: all 1s ease-in-out;
+}
+
+input[name="demo"], label {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(190px) translateY(190px);
+}
+
+label {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+input[name=demo] {
+  opacity: 0;
+}
+
+.first-radio, .first-radio-label {
+  transform: translateX(140px) translateY(190px);
+}
+
+.first-radio, .third-radio-label {
+  transform: translateX(240px) translateY(190px);
+}
+
+.active {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 5;
+}

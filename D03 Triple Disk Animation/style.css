@@ -1,0 +1,68 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #42e3f5;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  padding: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px #0009;
+}
+
+.circle1 {
+  animation: grow1 2s alternate infinite both cubic-bezier(0.4, 1, 0.4, 1);
+}
+
+.circle2 {
+  animation: grow2 2s alternate infinite both cubic-bezier(0.4, 1, 0.4, 1);
+}
+
+.circle3 {
+  animation: grow3 2s alternate infinite both cubic-bezier(0.4, 1, 0.4, 1);
+}
+
+@keyframes grow1 {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+@keyframes grow2 {
+  20% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
+@keyframes grow3 {
+  40% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
