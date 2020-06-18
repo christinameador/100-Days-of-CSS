@@ -1,0 +1,45 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.frame {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: #515261;
+  background-color: #D8C026;
+}
+.frame .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+  background-color:#F1DDD8;
+  cursor: pointer;
+  line-height: 1;
+}
+.frame .box .days {
+  color: #b5a409;
+}
+.frame .box .days:first-letter {
+ text-transform: uppercase;
+}
+.frame .box .dates {
+  font-weight: 700;
+  font-size: 3.75em;
+}
+.frame .box:hover {
+  -webkit-transform:scale(0.95);
+  transform:scale(0.95);
+  box-shadow: inset 2px 2px 4px 1px rgba (216,192,38,0.25);
+}

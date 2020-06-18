@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* Default little frame */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+  background: #fff;
+  color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Custom Code */
+body{
+  font-size: 13px;
+}
+.frame{
+  background-color: #efefef;
+}
+.center{
+  padding-top: 30px;
+}
+
+.plan, #details{
+   background: #fff;
+  box-shadow: 2px 2px 5px #999;
+
+}
+.plan{
+  display: inline-block;
+  width:103px;
+  float:left;
+  margin: 0 15px 30px;
+  text-align: center;
+  padding-bottom: 10px;
+  transition: transform 200ms linear;
+}
+#plan_basic{ transform-origin: left; }
+#plan_premium{ transform-origin: right; }
+
+.plan .title{
+  background-color: #65bfaf;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+.plan .price {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: .7;
+  margin-top:20px; 
+}
+.plan .per{
+   margin-bottom:15px;
+}
+.plan .blah{
+  border-bottom: 2px solid #c7c7c7;
+  opacity: .8;
+  width: 50px;
+  margin: 6px auto;
+}
+.plan .blah.short{
+  width: 30px;
+}
+
+#details{
+  clear:both;
+  margin:0 auto;
+  background-color: #fff;
+  width: 380px;
+  padding: 1px 0;
+}
+
+.detail{
+  clear: both;
+  height: 40px;
+  margin:15px 10px;
+}
+.data{
+}
+.data_min{
+  float: left;
+}
+.data_max{
+  float: right;
+
+}
+.progress, .inner{
+  border-radius: 5px;
+  width: 360px;
+  background-color: #efefef;
+  height: 10px;
+  
+  float:left;
+}
+
+.inner{
+  background-color:#65bfaf;
+  width: 0;
+}
+
+
+.plan:hover{
+  transform: scale(1.2);
+}
+.plan:hover .title{
+  background-color: #167d6b;
+}
+
+#plan_basic:hover ~ #details #user .inner,
+#plan_basic:hover ~ #details #gb .inner,
+#plan_basic:hover ~ #details #project .inner{
+  width:2%;
+}
+
+#plan_pro:hover ~ #details #user .inner{ width: 25%; }
+#plan_pro:hover ~ #details #gb .inner{ width: 70%; }
+#plan_pro:hover ~ #details #project .inner{ width:45%; }
+
+#plan_premium:hover ~ #details #user .inner,
+#plan_premium:hover ~ #details #gb .inner,
+#plan_premium:hover ~ #details #project .inner{
+  width:100%;
+}
+
+.plan:hover ~ #details .inner{
+  transition-duration: 200ms;
+  transition-property: width;
+  transition-timing-function: linear;
+}

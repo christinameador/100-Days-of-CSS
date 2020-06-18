@@ -1,0 +1,16 @@
+/* centering codepen.io viewport */
+html,body{margin:0px;box-sizing:border-box;height:100%;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+
+.main {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(320deg, #f2a7c3, #77c3f2, #bf78bb, #035aa6);
+  background-size: 950% 950%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}

@@ -1,0 +1,345 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #345;
+}
+
+.edges {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.edges .edge {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.19, 0.69, 0.4, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.edges .left {
+  top: -80px;
+  left: -80px;
+  border-width: 80px 0 80px 80px;
+  border-color: transparent transparent transparent #3289C3;
+  animation-name: edge-left;
+}
+.edges .right {
+  top: -80px;
+  border-width: 80px 80px 80px 0;
+  border-color: transparent #3087C1 transparent transparent;
+  animation-name: edge-right;
+}
+.edges .top {
+  top: -80px;
+  left: -80px;
+  border-width: 80px 80px 0 80px;
+  border-color: #3390C3 transparent transparent;
+  animation-name: edge-top;
+}
+.edges .bottom {
+  left: -80px;
+  border-width: 0 80px 80px;
+  border-color: transparent transparent #2882C5;
+  animation-name: edge-bottom;
+}
+
+.elements {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 185px;
+  left: 185px;
+}
+.elements .square, .elements .circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 5px;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.19, 0.69, 0.4, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.elements .square.small, .elements .small.circle {
+  width: 10px;
+  height: 10px;
+  left: 10px;
+  top: 10px;
+}
+.elements .square.big, .elements .big.circle {
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+}
+.elements .square.c1, .elements .c1.circle {
+  background: #f39c12;
+}
+.elements .square.c2, .elements .c2.circle {
+  background: #e67e22;
+}
+.elements .square.c3, .elements .c3.circle {
+  background: #1abc9c;
+}
+.elements .circle {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px;
+}
+.elements .circle.small {
+  border-width: 2px;
+}
+.elements .circle.big {
+  border-width: 8px;
+}
+.elements .circle.c1 {
+  background: transparent;
+  border-color: #f39c12;
+}
+.elements .circle.c2 {
+  background: transparent;
+  border-color: #e67e22;
+}
+.elements .circle.c3 {
+  background: transparent;
+  border-color: #1abc9c;
+}
+
+.square1 {
+  animation-name: square1;
+}
+
+.circle1 {
+  animation-name: circle1;
+}
+
+.square2 {
+  animation-name: square2;
+}
+
+.circle2 {
+  animation-name: circle2;
+}
+
+.square3 {
+  animation-name: square3;
+}
+
+.circle3 {
+  animation-name: circle3;
+}
+
+.square4 {
+  animation-name: square4;
+}
+
+.circle4 {
+  animation-name: circle4;
+}
+
+.square5 {
+  animation-name: square5;
+}
+
+.circle5 {
+  animation-name: circle5;
+}
+
+.square6 {
+  animation-name: square6;
+}
+
+.circle6 {
+  animation-name: circle6;
+}
+
+.square7 {
+  animation-name: square7;
+}
+
+.circle7 {
+  animation-name: circle7;
+}
+
+.square8 {
+  animation-name: square8;
+}
+
+.circle8 {
+  animation-name: circle8;
+}
+
+@keyframes edge-left {
+  0%, 20% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-160px);
+  }
+}
+@keyframes edge-right {
+  0%, 20% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(160px);
+  }
+}
+@keyframes edge-top {
+  0%, 20% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-160px);
+  }
+}
+@keyframes edge-bottom {
+  0%, 20% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(160px);
+  }
+}
+@keyframes square1 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(66px, 78px) rotate(110deg);
+  }
+}
+@keyframes square2 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(46px, -141px) rotate(163deg);
+  }
+}
+@keyframes square3 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(131px, -117px) rotate(126deg);
+  }
+}
+@keyframes square4 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(91px, -94px) rotate(122deg);
+  }
+}
+@keyframes square5 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(131px, -10px) rotate(111deg);
+  }
+}
+@keyframes square6 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(-94px, -66px) rotate(125deg);
+  }
+}
+@keyframes square7 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(-102px, 50px) rotate(139deg);
+  }
+}
+@keyframes square8 {
+  0%, 20% {
+    transform: scale(0) translate(0) rotate(0);
+  }
+  100% {
+    transform: scale(1) translate(-62px, 20px) rotate(118deg);
+  }
+}
+@keyframes circle1 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(13px, -113px);
+  }
+}
+@keyframes circle2 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(29px, -71px);
+  }
+}
+@keyframes circle3 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(1px, -72px);
+  }
+}
+@keyframes circle4 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(-62px, 132px);
+  }
+}
+@keyframes circle5 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(18px, 86px);
+  }
+}
+@keyframes circle6 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(62px, 15px);
+  }
+}
+@keyframes circle7 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(74px, -25px);
+  }
+}
+@keyframes circle8 {
+  0%, 20% {
+    transform: scale(0) translate(0);
+  }
+  100% {
+    transform: scale(1) translate(95px, -45px);
+  }
+}

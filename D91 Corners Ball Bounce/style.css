@@ -1,0 +1,133 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #32a852;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  top: 192px;
+  left: 192px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.ball-1 {
+  animation: ball-1 4s linear infinite;
+}
+
+.ball-2 {
+  animation: ball-2 4s linear infinite;
+}
+
+.ball-3 {
+  animation: ball-3 4s linear infinite;
+}
+
+.ball-4 {
+  animation: ball-4 4s linear infinite;
+}
+
+.ball-5 {
+  animation: ball-5 4s linear infinite;
+}
+
+.ball-6 {
+  animation: ball-6 4s linear infinite;
+}
+
+.ball-7 {
+  animation: ball-7 4s linear infinite;
+}
+
+.ball-8 {
+  animation: ball-8 4s linear infinite;
+}
+
+@keyframes ball-1 {
+  0%,
+    100% {
+    transform: translate(-192px, -192px);
+  }
+  50% {
+    transform: translate(0, 192px);
+  }
+}
+@keyframes ball-2 {
+  0%,
+    100% {
+    transform: translate(192px, -192px);
+  }
+  50% {
+    transform: translate(0, 192px);
+  }
+}
+@keyframes ball-3 {
+  0%,
+    100% {
+    transform: translate(192px, 192px);
+  }
+  50% {
+    transform: translate(0, -192px);
+  }
+}
+@keyframes ball-4 {
+  0%,
+    100% {
+    transform: translate(-192px, 192px);
+  }
+  50% {
+    transform: translate(0, -192px);
+  }
+}
+@keyframes ball-5 {
+  0%,
+    100% {
+    transform: translate(-192px, -192px);
+  }
+  50% {
+    transform: translate(192px, 0);
+  }
+}
+@keyframes ball-6 {
+  0%,
+    100% {
+    transform: translate(192px, -192px);
+  }
+  50% {
+    transform: translate(-192px, 0);
+  }
+}
+@keyframes ball-7 {
+  0%,
+    100% {
+    transform: translate(192px, 192px);
+  }
+  50% {
+    transform: translate(-192px, 0px);
+  }
+}
+@keyframes ball-8 {
+  0%,
+    100% {
+    transform: translate(-192px, 192px);
+  }
+  50% {
+    transform: translate(192px, 0px);
+  }
+}

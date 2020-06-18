@@ -1,0 +1,99 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #e05;
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  transform-origin: bottom;
+}
+
+.bounce-down {
+  animation: bounce-down 2s infinite cubic-bezier(0.75, -0.5, 0, 1.75);
+}
+
+.bounce-up {
+  animation: bounce-up 2s infinite cubic-bezier(0.75, -0.5, 0, 1.75);
+}
+
+.flip {
+  animation: flip 2s infinite ease-in;
+}
+
+.scale {
+  animation: scale 2s infinite ease-out;
+}
+
+@keyframes bounce-down {
+  0% {
+    transform: translateY(-100px);
+  }
+  20%, 100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-up {
+  0%,80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes flip {
+  0%, 80% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes scale {
+  40% {
+    transform: scale(1.6, 0.5) translate(0, 45px);
+  }
+  0%,100% {
+    transform: scale(1, 1) translate(0, -10px);
+  }
+}
+.shadow {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  height: 12px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 4px;
+  bottom: -5px;
+  z-index: -1;
+  animation: shadow 2s infinite linear;
+}
+
+@keyframes shadow {
+  0%,100% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scaleX(2);
+  }
+}

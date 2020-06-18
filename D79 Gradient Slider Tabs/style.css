@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+.frame{
+  width: 400px;
+  height: 400px;
+  display: flex;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  font-weight: 600;
+  color: transparent;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  will-change: width;
+}
+.item:hover{
+  flex-basis: 200px;
+  color: #fff;
+  font-size: 2em;
+}
+#one {
+  background: #facfef;
+}
+#two {
+  background: #faa0e3;
+}
+#three {
+  background: #fc65d6;
+}
+#four {
+  background: #fc17c3;
+}

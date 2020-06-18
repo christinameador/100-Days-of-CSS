@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: #111;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame {
+    background: #263A4D;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    animation: move linear infinite alternate;
+}
+
+.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+}
+
+.wave-back {
+    background: #406384;
+    height: 200px;
+    animation-duration: 5s;
+}
+
+.wave-back .circle:nth-of-type(even) {
+    background: #406384;
+}
+
+.wave-back .circle:nth-of-type(odd) {
+    background: #263A4D;
+}
+
+.wave-middle {
+    background: #5D90BF;
+    height: 120px;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+}
+
+.wave-middle .circle:nth-of-type(even) {
+    background: #5D90BF;
+}
+
+.wave-middle .circle:nth-of-type(odd) {
+    background: #406384;
+}
+
+.wave-front {
+    background: #7EB3E6;
+    height: 50px;
+    animation-duration: 3s;
+}
+
+.wave-front .circle:nth-of-type(even) {
+    background: #7EB3E6;
+}
+
+.wave-front .circle:nth-of-type(odd) {
+    background: #5D90BF;
+}
+
+@keyframes move {
+    100% {transform: translateX(-100px);
+  }
+}
