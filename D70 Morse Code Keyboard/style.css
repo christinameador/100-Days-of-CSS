@@ -1,0 +1,945 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.frame > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"] {
+  appearance: none;
+  visibility: collapse;
+  position: absolute;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.display {
+  height: 65%;
+  background-color: #00999e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lights {
+  display: flex;
+}
+
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 15px;
+  display: none;
+  opacity: 0.2;
+}
+.light:last-child {
+  margin-right: 0;
+}
+
+.plate {
+  padding: 15px 12px;
+  background-color: #94fbff;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.keyboard [for^="key"] {
+  font-size: 18px;
+  display: block;
+  width: 25px;
+  height: 24px;
+  padding-top: 1px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  margin: 0 3px;
+  transition: background-color .3s ease-in-out;
+}
+.keyboard [for^="key"]:hover {
+  background-color: #fff;
+}
+
+#key_A:checked ~ .plate .keyboard label[for=key_A] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_B:checked ~ .plate .keyboard label[for=key_B] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_C:checked ~ .plate .keyboard label[for=key_C] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_D:checked ~ .plate .keyboard label[for=key_D] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_E:checked ~ .plate .keyboard label[for=key_E] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_F:checked ~ .plate .keyboard label[for=key_F] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_G:checked ~ .plate .keyboard label[for=key_G] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_H:checked ~ .plate .keyboard label[for=key_H] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_I:checked ~ .plate .keyboard label[for=key_I] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_J:checked ~ .plate .keyboard label[for=key_J] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_K:checked ~ .plate .keyboard label[for=key_K] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_L:checked ~ .plate .keyboard label[for=key_L] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_M:checked ~ .plate .keyboard label[for=key_M] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_N:checked ~ .plate .keyboard label[for=key_N] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_O:checked ~ .plate .keyboard label[for=key_O] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_P:checked ~ .plate .keyboard label[for=key_P] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_Q:checked ~ .plate .keyboard label[for=key_Q] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_R:checked ~ .plate .keyboard label[for=key_R] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_S:checked ~ .plate .keyboard label[for=key_S] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_T:checked ~ .plate .keyboard label[for=key_T] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_U:checked ~ .plate .keyboard label[for=key_U] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_V:checked ~ .plate .keyboard label[for=key_V] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_W:checked ~ .plate .keyboard label[for=key_W] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_X:checked ~ .plate .keyboard label[for=key_X] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_Y:checked ~ .plate .keyboard label[for=key_Y] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_Z:checked ~ .plate .keyboard label[for=key_Z] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_0:checked ~ .plate .keyboard label[for=key_0] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_1:checked ~ .plate .keyboard label[for=key_1] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_2:checked ~ .plate .keyboard label[for=key_2] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_3:checked ~ .plate .keyboard label[for=key_3] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_4:checked ~ .plate .keyboard label[for=key_4] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_5:checked ~ .plate .keyboard label[for=key_5] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_6:checked ~ .plate .keyboard label[for=key_6] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_7:checked ~ .plate .keyboard label[for=key_7] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_8:checked ~ .plate .keyboard label[for=key_8] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_9:checked ~ .plate .keyboard label[for=key_9] {
+  background-color: #34e5eb;
+  color: #fff;
+}
+
+#key_A:checked ~ .display .lights .light-0, #key_A:checked ~ .display .lights .light-1 {
+  display: block;
+}
+#key_A:checked ~ .display .lights .light-0 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_A:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+  animation-delay: 0.5s;
+}
+
+#key_B:checked ~ .display .lights .light-0, #key_B:checked ~ .display .lights .light-1, #key_B:checked ~ .display .lights .light-2, #key_B:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_B:checked ~ .display .lights .light-0 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_B:checked ~ .display .lights .light-1, #key_B:checked ~ .display .lights .light-2, #key_B:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_B:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_B:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_B:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_C:checked ~ .display .lights .light-0, #key_C:checked ~ .display .lights .light-1, #key_C:checked ~ .display .lights .light-2, #key_C:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_C:checked ~ .display .lights .light-0, #key_C:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_C:checked ~ .display .lights .light-1, #key_C:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_C:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_C:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_C:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_D:checked ~ .display .lights .light-0, #key_D:checked ~ .display .lights .light-1, #key_D:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_D:checked ~ .display .lights .light-0 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_D:checked ~ .display .lights .light-1, #key_D:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_D:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_D:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+
+#key_E:checked ~ .display .lights .light-0 {
+  display: block;
+  animation: morse-ani-short .5s linear forwards;
+}
+
+#key_F:checked ~ .display .lights .light-0, #key_F:checked ~ .display .lights .light-1, #key_F:checked ~ .display .lights .light-2, #key_F:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_F:checked ~ .display .lights .light-0, #key_F:checked ~ .display .lights .light-2, #key_F:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_F:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+  animation-delay: 0.5s;
+}
+#key_F:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_F:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_F:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_G:checked ~ .display .lights .light-0, #key_G:checked ~ .display .lights .light-1, #key_G:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_G:checked ~ .display .lights .light-0, #key_G:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_G:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+  animation-delay: 1s;
+}
+#key_G:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_G:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+
+#key_H:checked ~ .display .lights .light-0, #key_H:checked ~ .display .lights .light-1, #key_H:checked ~ .display .lights .light-2, #key_H:checked ~ .display .lights .light-3 {
+  display: block;
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_H:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_H:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_H:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_I:checked ~ .display .lights .light-0, #key_I:checked ~ .display .lights .light-1 {
+  display: block;
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_I:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+
+#key_J:checked ~ .display .lights .light-0, #key_J:checked ~ .display .lights .light-1, #key_J:checked ~ .display .lights .light-2, #key_J:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_J:checked ~ .display .lights .light-0 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_J:checked ~ .display .lights .light-1, #key_J:checked ~ .display .lights .light-2, #key_J:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_J:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_J:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_J:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_K:checked ~ .display .lights .light-0, #key_K:checked ~ .display .lights .light-1, #key_K:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_K:checked ~ .display .lights .light-0, #key_K:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_K:checked ~ .display .lights .light-1 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_K:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_K:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+
+#key_L:checked ~ .display .lights .light-0, #key_L:checked ~ .display .lights .light-1, #key_L:checked ~ .display .lights .light-2, #key_L:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_L:checked ~ .display .lights .light-0, #key_L:checked ~ .display .lights .light-2, #key_L:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_L:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_L:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_L:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_L:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_M:checked ~ .display .lights .light-0, #key_M:checked ~ .display .lights .light-1 {
+  display: block;
+}
+#key_M:checked ~ .display .lights .light-0, #key_M:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_M:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_M:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+
+#key_N:checked ~ .display .lights .light-0, #key_N:checked ~ .display .lights .light-1 {
+  display: block;
+}
+#key_N:checked ~ .display .lights .light-0 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_N:checked ~ .display .lights .light-1 {
+  animation: morse-ani-short .5s linear forwards;
+  animation-delay: 0.5s;
+}
+
+#key_O:checked ~ .display .lights .light-0, #key_O:checked ~ .display .lights .light-1, #key_O:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_O:checked ~ .display .lights .light-0, #key_O:checked ~ .display .lights .light-1, #key_O:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_O:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_O:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_O:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_P:checked ~ .display .lights .light-0, #key_P:checked ~ .display .lights .light-1, #key_P:checked ~ .display .lights .light-2, #key_P:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_P:checked ~ .display .lights .light-0, #key_P:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_P:checked ~ .display .lights .light-1, #key_P:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_P:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_P:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_P:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_P:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_Q:checked ~ .display .lights .light-0, #key_Q:checked ~ .display .lights .light-1, #key_Q:checked ~ .display .lights .light-2, #key_Q:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_Q:checked ~ .display .lights .light-0, #key_Q:checked ~ .display .lights .light-1, #key_Q:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_Q:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_Q:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_Q:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_Q:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_Q:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_R:checked ~ .display .lights .light-0, #key_R:checked ~ .display .lights .light-1, #key_R:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_R:checked ~ .display .lights .light-0, #key_R:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_R:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_R:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_R:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_R:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_S:checked ~ .display .lights .light-0, #key_S:checked ~ .display .lights .light-1, #key_S:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_S:checked ~ .display .lights .light-0, #key_S:checked ~ .display .lights .light-1, #key_S:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_S:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_S:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_S:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_T:checked ~ .display .lights .light-0 {
+  display: block;
+}
+#key_T:checked ~ .display .lights .light-0 {
+  animation: morse-ani-long .5s linear forwards;
+}
+
+#key_U:checked ~ .display .lights .light-0, #key_U:checked ~ .display .lights .light-1, #key_U:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_U:checked ~ .display .lights .light-0, #key_U:checked ~ .display .lights .light-1 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_U:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_U:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_U:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_U:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_V:checked ~ .display .lights .light-0, #key_V:checked ~ .display .lights .light-1, #key_V:checked ~ .display .lights .light-2, #key_V:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_V:checked ~ .display .lights .light-0, #key_V:checked ~ .display .lights .light-1, #key_V:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_V:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_V:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_V:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_V:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_V:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_W:checked ~ .display .lights .light-0, #key_W:checked ~ .display .lights .light-1, #key_W:checked ~ .display .lights .light-2 {
+  display: block;
+}
+#key_W:checked ~ .display .lights .light-0 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_W:checked ~ .display .lights .light-1, #key_W:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_W:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_W:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_W:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+
+#key_X:checked ~ .display .lights .light-0, #key_X:checked ~ .display .lights .light-1, #key_X:checked ~ .display .lights .light-2, #key_X:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_X:checked ~ .display .lights .light-0, #key_X:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_X:checked ~ .display .lights .light-1, #key_X:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_X:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_X:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_X:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_X:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_Y:checked ~ .display .lights .light-0, #key_Y:checked ~ .display .lights .light-1, #key_Y:checked ~ .display .lights .light-2, #key_Y:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_Y:checked ~ .display .lights .light-0, #key_Y:checked ~ .display .lights .light-2, #key_Y:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_Y:checked ~ .display .lights .light-1 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_Y:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_Y:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_Y:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_Y:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_Z:checked ~ .display .lights .light-0, #key_Z:checked ~ .display .lights .light-1, #key_Z:checked ~ .display .lights .light-2, #key_Z:checked ~ .display .lights .light-3 {
+  display: block;
+}
+#key_Z:checked ~ .display .lights .light-0, #key_Z:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_Z:checked ~ .display .lights .light-2, #key_Z:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_Z:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_Z:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_Z:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_Z:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_0:checked ~ .display .lights .light-0, #key_0:checked ~ .display .lights .light-1, #key_0:checked ~ .display .lights .light-2, #key_0:checked ~ .display .lights .light-3, #key_0:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_0:checked ~ .display .lights .light-0, #key_0:checked ~ .display .lights .light-1, #key_0:checked ~ .display .lights .light-2, #key_0:checked ~ .display .lights .light-3, #key_0:checked ~ .display .lights .light-4 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_0:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_0:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_0:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_0:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_1:checked ~ .display .lights .light-0, #key_1:checked ~ .display .lights .light-1, #key_1:checked ~ .display .lights .light-2, #key_1:checked ~ .display .lights .light-3, #key_1:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_1:checked ~ .display .lights .light-1, #key_1:checked ~ .display .lights .light-2, #key_1:checked ~ .display .lights .light-3, #key_1:checked ~ .display .lights .light-4 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_1:checked ~ .display .lights .light-0 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_1:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_1:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_1:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_1:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_2:checked ~ .display .lights .light-0, #key_2:checked ~ .display .lights .light-1, #key_2:checked ~ .display .lights .light-2, #key_2:checked ~ .display .lights .light-3, #key_2:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_2:checked ~ .display .lights .light-2, #key_2:checked ~ .display .lights .light-3, #key_2:checked ~ .display .lights .light-4 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_2:checked ~ .display .lights .light-0, #key_2:checked ~ .display .lights .light-1 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_2:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_2:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_2:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_2:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_3:checked ~ .display .lights .light-0, #key_3:checked ~ .display .lights .light-1, #key_3:checked ~ .display .lights .light-2, #key_3:checked ~ .display .lights .light-3, #key_3:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_3:checked ~ .display .lights .light-3, #key_3:checked ~ .display .lights .light-4 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_3:checked ~ .display .lights .light-0, #key_3:checked ~ .display .lights .light-1, #key_3:checked ~ .display .lights .light-2 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_3:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_3:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_3:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_3:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_4:checked ~ .display .lights .light-0, #key_4:checked ~ .display .lights .light-1, #key_4:checked ~ .display .lights .light-2, #key_4:checked ~ .display .lights .light-3, #key_4:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_4:checked ~ .display .lights .light-4 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_4:checked ~ .display .lights .light-0, #key_4:checked ~ .display .lights .light-1, #key_4:checked ~ .display .lights .light-2, #key_4:checked ~ .display .lights .light-3 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_4:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_4:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_4:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_4:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_5:checked ~ .display .lights .light-0, #key_5:checked ~ .display .lights .light-1, #key_5:checked ~ .display .lights .light-2, #key_5:checked ~ .display .lights .light-3, #key_5:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_5:checked ~ .display .lights .light-0, #key_5:checked ~ .display .lights .light-1, #key_5:checked ~ .display .lights .light-2, #key_5:checked ~ .display .lights .light-3, #key_5:checked ~ .display .lights .light-4 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_5:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_5:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_5:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_5:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_6:checked ~ .display .lights .light-0, #key_6:checked ~ .display .lights .light-1, #key_6:checked ~ .display .lights .light-2, #key_6:checked ~ .display .lights .light-3, #key_6:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_6:checked ~ .display .lights .light-1, #key_6:checked ~ .display .lights .light-2, #key_6:checked ~ .display .lights .light-3, #key_6:checked ~ .display .lights .light-4 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_6:checked ~ .display .lights .light-0 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_6:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_6:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_6:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_6:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_7:checked ~ .display .lights .light-0, #key_7:checked ~ .display .lights .light-1, #key_7:checked ~ .display .lights .light-2, #key_7:checked ~ .display .lights .light-3, #key_7:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_7:checked ~ .display .lights .light-2, #key_7:checked ~ .display .lights .light-3, #key_7:checked ~ .display .lights .light-4 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_7:checked ~ .display .lights .light-0, #key_7:checked ~ .display .lights .light-1 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_7:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_7:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_7:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_7:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_8:checked ~ .display .lights .light-0, #key_8:checked ~ .display .lights .light-1, #key_8:checked ~ .display .lights .light-2, #key_8:checked ~ .display .lights .light-3, #key_8:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_8:checked ~ .display .lights .light-3, #key_8:checked ~ .display .lights .light-4 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_8:checked ~ .display .lights .light-0, #key_8:checked ~ .display .lights .light-1, #key_8:checked ~ .display .lights .light-2 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_8:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_8:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_8:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_8:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+#key_9:checked ~ .display .lights .light-0, #key_9:checked ~ .display .lights .light-1, #key_9:checked ~ .display .lights .light-2, #key_9:checked ~ .display .lights .light-3, #key_9:checked ~ .display .lights .light-4 {
+  display: block;
+}
+#key_9:checked ~ .display .lights .light-4 {
+  animation: morse-ani-short .5s linear forwards;
+}
+#key_9:checked ~ .display .lights .light-0, #key_9:checked ~ .display .lights .light-1, #key_9:checked ~ .display .lights .light-2, #key_9:checked ~ .display .lights .light-3 {
+  animation: morse-ani-long .5s linear forwards;
+}
+#key_9:checked ~ .display .lights .light-1 {
+  animation-delay: 0.5s;
+}
+#key_9:checked ~ .display .lights .light-2 {
+  animation-delay: 1s;
+}
+#key_9:checked ~ .display .lights .light-3 {
+  animation-delay: 1.5s;
+}
+#key_9:checked ~ .display .lights .light-4 {
+  animation-delay: 2s;
+}
+
+@keyframes morse-ani-short {
+  0%, 50% {
+    opacity: 0.2;
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes morse-ani-long {
+  0%, 20% {
+    opacity: 0.2;
+  }
+  40% {
+    width: 20px;
+    opacity: 1;
+  }
+  100% {
+    width: 60px;
+    opacity: 1;
+  }
+}
