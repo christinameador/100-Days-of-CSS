@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #022c75;
+}
+
+.dots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dots .dot {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+#dot1 {
+  animation: wiggle 15s ease-in-out infinite;
+}
+
+#dot2 {
+  animation: wiggle 7.5s ease-in-out infinite;
+}
+
+#dot3 {
+  animation: wiggle 5s ease-in-out infinite;
+}
+
+#dot4 {
+  animation: wiggle 3.75s ease-in-out infinite;
+}
+
+#dot5 {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+#dot6 {
+  animation: wiggle 2.5s ease-in-out infinite;
+}
+
+#dot7 {
+  animation: wiggle 2.1428571429s ease-in-out infinite;
+}
+
+#dot8 {
+  animation: wiggle 1.875s ease-in-out infinite;
+}
+
+#dot9 {
+  animation: wiggle 1.6666666667s ease-in-out infinite;
+}
+
+#dot10 {
+  animation: wiggle 1.5s ease-in-out infinite;
+}
+
+#dot11 {
+  animation: wiggle 1.3636363636s ease-in-out infinite;
+}
+
+#dot12 {
+  animation: wiggle 1.25s ease-in-out infinite;
+}
+
+#dot13 {
+  animation: wiggle 1.1538461538s ease-in-out infinite;
+}
+
+#dot14 {
+  animation: wiggle 1.0714285714s ease-in-out infinite;
+}
+
+#dot15 {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+#dot16 {
+  animation: wiggle 0.9375s ease-in-out infinite;
+}
+
+#dot17 {
+  animation: wiggle 0.8823529412s ease-in-out infinite;
+}
+
+#dot18 {
+  animation: wiggle 0.8333333333s ease-in-out infinite;
+}
+
+#dot19 {
+  animation: wiggle 0.7894736842s ease-in-out infinite;
+}
+
+#dot20 {
+  animation: wiggle 0.75s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}

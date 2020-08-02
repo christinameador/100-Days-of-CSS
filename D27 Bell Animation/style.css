@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: hotpink;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.ripple {
+  width: 0px;
+  height: 0px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  clip-path: polygon(0% 0%, 50% 50%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
+  animation-name: ripple;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.ripple:nth-child(2) {
+  animation-delay: .1s;
+}
+.ripple:nth-child(2) {
+  animation-delay: .3s;
+}
+.ripple:nth-child(3) {
+  animation-delay: .5s;
+}
+
+.bell {
+  fill: white;
+  width: 80px;
+  height: 80px;
+  transform-origin: 50% 0;
+  animation-name: ring;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  }
+  5% {
+    transform: rotate(-3deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15%,25%,35% {
+    transform: rotate(-10deg);
+  }
+  20%,30%,40% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  55% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes ripple {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+  30% {
+    opacity: 1;
+  }
+  70%, 100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
