@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #34495E;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-perspective: 250px;
+          perspective: 250px;
+  box-shadow: 2px 2px 7px;
+}
+
+.wrapper {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  box-shadow: 2px 2px 7px;
+}
+.wrapper .input {
+  width: 83%;
+  padding: 1em;
+  font-size: 16px;
+  box-shadow: 2px 2px 7px;
+  border: none;
+  text-align: center;
+  z-index: 999;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrapper .show {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 9;
+  position: absolute;
+  top: 50px;
+  width: 192px;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-perspective: 550px;
+          perspective: 550px;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.key {
+  position: relative;
+  bottom: 0;
+  z-index: -999;
+  width: 192px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fff;
+  text-align: center;
+  color: #fff;
+  background-color: #64C760;
+}
+
+.anim {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
