@@ -1,0 +1,79 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2C3E50;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrap {
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  left: -200px;
+  overflow: hidden;
+}
+
+.follower {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  background-color: #2ECC71;
+  border-radius: 50%;
+  transition: 0.5s all ease-out;
+}
+
+.ball {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.follower:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: -26%;
+  left: -26%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.9;
+  transform: scale(0.2);
+  border: 2px solid #2ECC71;
+  margin: 0px;
+  padding: 0px;
+  animation: frame 1.5s ease-in-out infinite;
+}
+
+@keyframes frame {
+  100% {
+    opacity: 0.1;
+    transform: scale(1.6);
+  }
+}
