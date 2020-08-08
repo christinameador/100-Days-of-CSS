@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fa96c8;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+}
+
+.ball-1 {
+  animation: 1s ease-in-out infinite alternate move;
+  animation-delay: 10ms;
+  opacity: 1;
+}
+
+.ball-2 {
+  animation: 1s ease-in-out infinite alternate move;
+  animation-delay: 20ms;
+  opacity: 0.5;
+}
+
+.ball-3 {
+  animation: 1s ease-in-out infinite alternate move;
+  animation-delay: 30ms;
+  opacity: 0.3333333333;
+}
+
+.ball-4 {
+  animation: 1s ease-in-out infinite alternate move;
+  animation-delay: 40ms;
+  opacity: 0.25;
+}
+
+.ball-5 {
+  animation: 1s ease-in-out infinite alternate move;
+  animation-delay: 50ms;
+  opacity: 0.2;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(150px);
+  }
+}
